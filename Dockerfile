@@ -21,5 +21,5 @@ WORKDIR /app
 COPY --from=build /app/publish .
 
 # Set environment and entry point
-ENV ASPNETCORE_URLS=http://+:44306
+ENV ASPNETCORE_URLS=http://+:8080
 ENTRYPOINT ["dotnet", "moco_backend.dll"]
