@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "CfH0s44aYHTIWQFd/HQz7UeXM0L0OhdmpD9cxt/CJpU=",
+  "Source": "moco_backend",
+  "BasePath": "_content/moco_backend",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

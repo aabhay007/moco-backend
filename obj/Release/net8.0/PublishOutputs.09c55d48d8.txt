@@ -1,0 +1,11 @@
+D:\SCIM\moco_backend\moco_backend\obj\Release\net8.0\PubTmp\Out\moco_backend.exe
+D:\SCIM\moco_backend\moco_backend\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+D:\SCIM\moco_backend\moco_backend\obj\Release\net8.0\PubTmp\Out\appsettings.json
+D:\SCIM\moco_backend\moco_backend\obj\Release\net8.0\PubTmp\Out\moco_backend.dll
+D:\SCIM\moco_backend\moco_backend\obj\Release\net8.0\PubTmp\Out\moco_backend.deps.json
+D:\SCIM\moco_backend\moco_backend\obj\Release\net8.0\PubTmp\Out\moco_backend.runtimeconfig.json
+D:\SCIM\moco_backend\moco_backend\obj\Release\net8.0\PubTmp\Out\moco_backend.pdb
+D:\SCIM\moco_backend\moco_backend\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+D:\SCIM\moco_backend\moco_backend\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+D:\SCIM\moco_backend\moco_backend\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\SCIM\moco_backend\moco_backend\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
