@@ -38,7 +38,7 @@ builder.Services.AddCors(options =>
             )
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .AllowCredentials(); // needed for cookies/session
+            .AllowCredentials(); 
         });
 });
 var app = builder.Build();
@@ -49,12 +49,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("AllowSpecificOrigins");
 
 app.UseMiddleware<ApiKeyMiddleware>();
 
-app.UseCors("AllowSpecificOrigins");
-
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
