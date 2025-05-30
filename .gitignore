@@ -1,0 +1,42 @@
+# Build and VS artifacts
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Rider IDE files
+.idea/
+
+# Mac/Linux hidden files
+.DS_Store
+Thumbs.db
+
+# .NET Core related
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Logs
+*.log
+
+# User-specific files
+*.csproj.user
+
+# Secrets (if any are added later)
+secrets.json
+
+# Docker
+**/docker-compose.override.yml
+
+# HTTP test files (optional to ignore if you're not using them)
+#moco_backend.http
+
+# Node or frontend stuff if later added (like for Next.js or hybrid apps)
+node_modules/
+
+# Railway CLI cache (in case of local CLI config)
+.railway/
+
+# Optional: ignore published artifacts
+publish/
