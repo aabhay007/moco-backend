@@ -19,7 +19,8 @@ builder.Services.AddCors(options =>
         {
             builder.WithOrigins(
                 "http://localhost:3000",        // Localhost (dev)
-                "https://moco-frontend.vercel.app" // Vercel live URL
+                "https://moco-frontend.vercel.app", // Next.js production URL
+                "https://live-angular-project-123.web.app" // Angular production URL
             )
             .AllowAnyHeader()
             .AllowAnyMethod()
