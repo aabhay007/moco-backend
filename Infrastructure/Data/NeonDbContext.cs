@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using moco_backend.Models;
+using moco_backend.API.Models;
 
-namespace moco_backend.Data;
+namespace moco_backend.Infrastructure.Data;
 
 public partial class NeonDbContext : DbContext
 {

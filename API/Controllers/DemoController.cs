@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using moco_backend.Data;
-using moco_backend.Models;
+using moco_backend.API.Models;
+using moco_backend.Infrastructure.Data;
 
-namespace moco_backend.Controllers
+namespace moco_backend.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

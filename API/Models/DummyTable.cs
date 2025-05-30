@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace moco_backend.Models;
+namespace moco_backend.API.Models;
 
 public partial class DummyTable
 {

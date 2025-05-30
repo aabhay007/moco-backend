@@ -1,4 +1,4 @@
-﻿namespace moco_backend.Security.Middleware
+﻿namespace moco_backend.Infrastructure.Security.Middleware
 {
     public class ApiKeyMiddleware
     {

@@ -1,6 +1,7 @@
+using MediatR;
 using Microsoft.EntityFrameworkCore;
-using moco_backend.Data;
-using moco_backend.Security.Middleware;
+using moco_backend.Infrastructure.Data;
+using moco_backend.Infrastructure.Security.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddMediatR(typeof(Program));
 builder.Configuration.AddEnvironmentVariables();
 builder.Services.AddDbContext<NeonDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
