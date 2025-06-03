@@ -16,10 +16,10 @@ namespace moco_backend.API.Controllers
             _context = context;
         }
       
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<DummyTable>>> GetDummyTables()
-        {
-            return await _context.DummyTables.ToListAsync();
-        }
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<DummyTable>>> GetDummyTables()
+        //{
+        //    return await _context.DummyTables.ToListAsync();
+        //}
     }
 }
