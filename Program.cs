@@ -23,7 +23,8 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder.WithOrigins(
-                "http://localhost:3000",        // Localhost (dev)
+                "http://localhost:4200",         // Localhost (dev)Angular.js
+                "http://localhost:3000",        // Localhost (dev) Next.js
                 "https://moco-frontend.vercel.app", // Next.js production URL
                 "https://live-angular-project-123.web.app" // Angular production URL
             )
