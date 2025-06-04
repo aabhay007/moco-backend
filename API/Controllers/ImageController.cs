@@ -20,14 +20,14 @@ namespace moco_backend.API.Controllers
         public async Task<IActionResult> UploadImage([FromBody] ImageDto dto)
         {
             var result = await _imageService.UploadImageAsync(dto);
-            return StatusCode(result.StatusCode, result);
+            return Ok(result);
         }
 
         [HttpGet("check-upload-limit")]
         public async Task<IActionResult> CheckUploadLimit([FromQuery] string email)
         {
             var result = await _imageService.CheckUploadLimit(email);
-            return StatusCode(result.StatusCode, result);
+            return Ok(result);
         }
     }
 }
