@@ -22,6 +22,8 @@ public partial class NeonDbContext : DbContext
 
     public virtual DbSet<DummyTable> DummyTables { get; set; }
 
+    public virtual DbSet<ImageLibrary> ImageLibraries { get; set; }
+
     public virtual DbSet<Message> Messages { get; set; }
 
     public virtual DbSet<MessageStatus> MessageStatuses { get; set; }
@@ -97,6 +99,23 @@ public partial class NeonDbContext : DbContext
                 .HasColumnType("jsonb")
                 .HasColumnName("data");
             entity.Property(e => e.Name).HasColumnName("name");
+        });
+
+        modelBuilder.Entity<ImageLibrary>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("image_library_pkey");
+
+            entity.ToTable("image_library");
+
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("gen_random_uuid()")
+                .HasColumnName("id");
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("created_at");
+            entity.Property(e => e.Email).HasColumnName("email");
+            entity.Property(e => e.ImageLink).HasColumnName("image_link");
         });
 
         modelBuilder.Entity<Message>(entity =>

@@ -13,14 +13,18 @@ namespace moco_backend.Infrastructure.Services.UserServices
         {
             _context = context;
         }
-        public async Task<string> CreateUserIfNotExistsAsync(UserDto userDto)
+        public async Task<ApiResponse<string>> CreateUserIfNotExistsAsync(UserDto userDto)
         {
             var existingUser = await _context.Users
            .FirstOrDefaultAsync(u => u.Email == userDto.Email);
 
             if (existingUser != null)
             {
-                return "User already exists.";
+                return ApiResponse<string>.SuccessResponse(
+               "User Already Existed!",
+               "User Existed",
+               409
+              );
             }
 
             var newUser = new User
@@ -34,7 +38,11 @@ namespace moco_backend.Infrastructure.Services.UserServices
             _context.Users.Add(newUser);
             await _context.SaveChangesAsync();
 
-            return "User created.";
+             return ApiResponse<string>.SuccessResponse(
+                "User created successfully.",
+                "User Created",
+                200
+            );
         }
     }
 }
