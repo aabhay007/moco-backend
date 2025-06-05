@@ -29,5 +29,11 @@ namespace moco_backend.API.Controllers
             var result = await _imageService.CheckUploadLimit(email);
             return Ok(result);
         }
+        [HttpGet("get-images-by-user")]
+        public async Task<IActionResult> GetImagesByUser([FromQuery] string email)
+        {
+            var result = await _imageService.GetImagesByUserAsync(email);
+            return Ok(result);
+        }
     }
 }

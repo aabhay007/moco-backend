@@ -21,6 +21,30 @@ namespace moco_backend.Infrastructure.Services.ImageServices
                 : result;
         }
 
+        public async Task<ApiResponse<string>> GetImagesByUserAsync(string email)
+        {
+            return await _context.ImageLibraries
+                .Where(img => img.Email == email)
+                .Select(img => img.ImageLink)
+                .ToListAsync()
+                .ContinueWith(task =>
+                {
+                    if (task.IsFaulted || task.Result == null || !task.Result.Any())
+                    {
+                        return ApiResponse<string>.FailResponse(
+                            new List<string> { "No images found for this user." },
+                            "No images available",
+                            404
+                        );
+                    }
+                    return ApiResponse<string>.SuccessResponse(
+                        string.Join(", ", task.Result),
+                        "Images retrieved successfully",
+                        200
+                    );
+                });
+        }
+
         public async Task<ApiResponse<string>> UploadImageAsync(ImageDto dto)
         {
             var validationResult = await ValidateUserAndUploadLimit(dto.Email);
